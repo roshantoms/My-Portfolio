@@ -11,6 +11,54 @@
     --font-base: "Bai Jamjuree";
 }
 
+
+
+[data-theme="light"] {
+    /* Light theme variations */
+    --color-body: #1f2833;
+    --color-heading: #3d52a0;
+    --color-base: #e0e0e0;
+    --color-base2: #f5f5f5;
+    --color-brand: #7091e6;
+    --color-brand2: #3d52a0;
+}
+
+.theme-toggle-container {
+    position: fixed; /* Changed to fixed for global access */
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: var(--color-base);
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#themeToggle {
+    background: transparent;
+    border: none;
+    color: var(--color-brand);
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#themeToggle:hover {
+    color: var(--color-brand2);
+    transform: scale(1.1);
+}
+
+/* Smooth transitions */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
 body {
     background-color: var(--color-base2);
     color: var(--color-body);
@@ -36,6 +84,13 @@ img {
     width: 100%;
 }
 
+.card-img-top {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
 .text-brand {
     color: var(--color-brand);
 }
@@ -52,7 +107,6 @@ img {
     justify-content: center;
     padding-top: 80px;
     padding-bottom: 80px;
-    border-bottom: 2px solid #0b0c10;
 }
 
 .shadow-effect {
@@ -77,14 +131,16 @@ img {
 /* NAVBAR */
 .navbar {
     background-color: var(--color-base);
+    transition: all 0.3s ease;
 }
 
 .navbar .nav-link {
     font-weight: 700;
     text-transform: uppercase;
-    color: #c5c6c7;
+    color: var(--color-body);
     cursor: pointer;
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .navbar .nav-link span {
@@ -104,9 +160,7 @@ img {
     .navbar {
         min-height: 100vh;
         width: var(--sidbar-width);
-        background: linear-gradient(#1f2833, #1f2833), url(../images/sidebar-img.jpg);
-        background-size: cover;
-        background-position: center;
+        background: var(--color-base);
     }
 
     .navbar-brand img {
