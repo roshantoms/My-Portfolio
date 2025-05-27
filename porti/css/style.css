@@ -24,14 +24,12 @@
 }
 
 .theme-toggle-container {
-    position: fixed; /* Changed to fixed for global access */
+    position: fixed; 
     top: 20px;
     right: 20px;
     z-index: 1000;
-    background-color: var(--color-base);
     padding: 5px;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 #themeToggle {
@@ -374,4 +372,28 @@ html {
 
 .image-container:hover img {
     opacity: 0.5;
+}
+
+
+
+.learn-more-link {
+  color: var(--color-brand);
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 1px;
+  transition: color 0.3s ease;
+}
+
+.learn-more-link:hover,
+.learn-more-link:focus {
+  color: var(--color-brand2);
+}
+
+@media (max-width: 576px) {
+  .learn-more-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }

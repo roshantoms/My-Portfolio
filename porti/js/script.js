@@ -66,3 +66,19 @@ function openPopup(imageSrc) {
 function closePopup() {
     document.getElementById("popup").style.display = "none";
 }
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
+
+learnMoreButtons.forEach(button => {
+    button.addEventListener('click', function () {
+    const card = this.closest('.card');
+    const paragraph = card.querySelector('.card-text');
+    paragraph.classList.toggle('d-none');
+    });
+  });
+});
+
