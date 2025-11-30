@@ -17,7 +17,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
 const certTrack = document.getElementById('certificationsTrack');
 const certPrev = document.getElementById('certPrev');
 const certNext = document.getElementById('certNext');
-const certCards = document.querySelectorAll('.cert-card');
 
 certPrev.addEventListener('click', () => {
     certTrack.scrollBy({ left: -330, behavior: 'smooth' });
